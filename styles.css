@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+#recommendation-widget {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#promoted-label {
+    font-size: 12px;
+    color: #777;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+
+#recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.recommendation {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    max-width: 320px;
+    width: 48%;
+    margin-bottom: 20px;
+    display: block;
+    border: none;
+    box-shadow: none;
+}
+
+.recommendation:hover {
+    transform: scale(1.03);
+}
+
+.recommendation img {
+    width: 100%;
+    height: 90px; 
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.recommendation a {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.recommendation a:hover {
+    color: #007bff;
+}
+
+.recommendation .source {
+    font-size: 12px;
+    color: #777;
+    padding: 0 8px 10px;
+}
+
+
+@media (max-width: 600px) {
+    .recommendation {
+        width: 48%;
+    }
+    
+    .recommendation img {
+        width: 100px;
+        height: 60px;
+    }
+    
+    .recommendation a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .recommendation {
+        width: 100%;
+    }
+}
